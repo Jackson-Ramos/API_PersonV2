@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/erudio?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: none
+      properties:
+          hibernate:
+            dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: false
+  springdoc:
+    pathsToMatch: /person/**
+    swagger-ui:
+      user-toot-path: true
+
+
+
+
+################# CONFIGURAÇÃO DO POSTGRESQL ####################
+#spring:
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/erudio
+#    username: postgres
+#    password: root
+#  jpa:
+#    open-in-view: true
+#    hibernate:
+#      ddl-auto: update
+#      properties:
+#        hibernate:
+#          dialect: org.hibernate.dialect.PostgreSQL81Dialect
+#    show-sql: false
+#  springdoc:
+#    pathsToMatch: /person/**
+#    swagger-ui:
+#      user-toot-path: true
